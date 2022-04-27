@@ -75,12 +75,13 @@ class Graph{
     }
   }
   
-  Node findNode(String url){
+  Node findNode(String url){ 
     for(Node node:this.nodes){
       if(url.equals(node.url)){
         return node;
       } 
     }
+    return new Node();
   }
   
   void show(){
