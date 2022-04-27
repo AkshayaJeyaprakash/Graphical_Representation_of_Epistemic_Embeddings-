@@ -40,8 +40,8 @@ This project shall aim at one such visualization of Graph Representation of Epis
 
 | **s.no** | **method** | **usage** |
 | --- | --- | --- |
-| **1** | **ArrayList**** \&lt; ****String**** \&gt;** crawl() | This method doesn&#39;t accept any arguments. It creates 3 different variables at the time of invocation, the first one is &#39;inputline&#39; which stores the HTML code of the website and two arraylists URLs and URLss are created. This method is used to populate the list URLs with the URL of the hyperlinks present in any website. The URLs present in this list are then filtered and valid URLs from this are stored in the list URLss. Here the number of hyperlinks fetched is limited to 9, since fetching all the hyperlinks becomes a time-consuming process. |
-| **2** | **ArrayList**** \&lt; ****String**** \&gt;**crawl(**String** url) | This method which accepts the string url which is the url link of the wikipedia website which is to be parsed as an argument initially performs the tasks which are done by the constructor Crawler(String url) and in the latter part it completes the same task done by the method crawl() which accepts no arguments. |
+| **1** | **ArrayList** **String** crawl() | This method doesn&#39;t accept any arguments. It creates 3 different variables at the time of invocation, the first one is &#39;inputline&#39; which stores the HTML code of the website and two arraylists URLs and URLss are created. This method is used to populate the list URLs with the URL of the hyperlinks present in any website. The URLs present in this list are then filtered and valid URLs from this are stored in the list URLss. Here the number of hyperlinks fetched is limited to 9, since fetching all the hyperlinks becomes a time-consuming process. |
+| **2** | **ArrayList** **String** **crawl(**String** url) | This method which accepts the string url which is the url link of the wikipedia website which is to be parsed as an argument initially performs the tasks which are done by the constructor Crawler(String url) and in the latter part it completes the same task done by the method crawl() which accepts no arguments. |
 | **3** | **String** ToString ( **ArrayList**** \&lt; ****Character**** \&gt;** list) | This method accepts an arraylist of character elements and converts it to an arraylist of string elements. |
 
 # 2. Graph
@@ -52,7 +52,7 @@ This project shall aim at one such visualization of Graph Representation of Epis
 | --- | --- | --- |
 | **1** | **int** [][] adjacency\_matrix | Variable used to store the adjacency matrix of a graph which is to be displayed on the set-up |
 | **2** | **int** n\_nodes | Variable used to store the total number of nodes which is to be be displayed in a graph |
-| **3** | **ArrayList**** \&lt; ****Node**** \&gt;** nodes | Variable which is used to store the list of all the node objects which are to be displayed in the graph |
+| **3** | **ArrayList** **Node** nodes | Variable which is used to store the list of all the node objects which are to be displayed in the graph |
 | **4** | **boolean** adj | Variable used to store if a node is adjacent to another or not |
 | **5** | **Crawler** crawler | Variable of Crawler class created in order to invoke functions from crawler class whenever needed. |
 
@@ -83,7 +83,7 @@ This project shall aim at one such visualization of Graph Representation of Epis
 | **s.no** | **variable** | **description** |
 | --- | --- | --- |
 | **1** | **String** url | A variable which is used to store the string of url link of the wikipedia website which is to be parsed |
-| **2** | **ArrayList**** \&lt; ****String**** \&gt;** nodes\_url | A super set array of the list of all nodes which is present in the graph object |
+| **2** | **ArrayList**  **String** nodes\_url | A super set array of the list of all nodes which is present in the graph object |
 | **3** | **int** depth | A variable which represents the maximum number of edges between the root node and leaf node or the number of recursion the parsing process is to be performed |
 | **4** | **Graph** g | A graph object created in order to invoke the function from graph class whenever needed |
 
@@ -150,21 +150,9 @@ This project shall aim at one such visualization of Graph Representation of Epis
 
 | **s.no** | **method** | **description** |
 | --- | --- | --- |
-| **1** | **void**** setup()** | Used to define the size and other properties of the display window and invoke the functions which correspond to the objects being displayed on the display window |
+| **1** | **void** **setup()** | Used to define the size and other properties of the display window and invoke the functions which correspond to the objects being displayed on the display window |
 | **2** | **void draw()** | Has built-in looping properties. Used to update the portion of each particle (node object) every second. Also changes the colour of a node if it is clicked for the first time and highlights the node if it is already highlighted and invokes the functions which correspond to the graph to be displayed. It is also used to define the background colour and stroke colour. |
-| **3** | **void**** keyPressed()** | Lock the position of the nodes if they are in an unlocked state and unlock them if they are in a locked state whenever any key is pressed |
-| **4** | **void**** mouseReleased()** | Updates the value of the variable is\_node\_pressed and fetches the values of the variable node\_pressed whenever mouse is released |
-| **5** | **void**** mousePressed()** | Compares the coordinate of mouse pointer with the position of each node and updates the value of the variable node\_pressed whenever mouse is pressed |
-| **6** | **void**** mouseClicked()** | Compare the coordinate of the mouse pointer with the position of each node and update the value of the variable node\_clicked whenever mouse is clicked and open the URL that corresponds to that node in the default browser being used. |
-
-# UML diagram
-
-![](RackMultipart20220427-1-pd6gl3_html_4f9fd0b2c77ee392.png)
-
-# Output
-
-![](RackMultipart20220427-1-pd6gl3_html_d7c254e484933062.png)
-
-# Conclusion
-
-This project proves to be a successful implementation of a HTML parser and a Web Crawler bonded together in order to visualize Graph Representation of Epistemic Embeddings on Wikipedeic réseau which shall aid the user to get a bird&#39;s eye view of the epistemic connections as well as help technologies like knowledge graphs to build upon it. As a further improvement this can be integrated with Natural Language Processing
+| **3** | **void** **keyPressed()** | Lock the position of the nodes if they are in an unlocked state and unlock them if they are in a locked state whenever any key is pressed |
+| **4** | **void** **mouseReleased()** | Updates the value of the variable is\_node\_pressed and fetches the values of the variable node\_pressed whenever mouse is released |
+| **5** | **void** **mousePressed()** | Compares the coordinate of mouse pointer with the position of each node and updates the value of the variable node\_pressed whenever mouse is pressed |
+| **6** | **void** **mouseClicked()** | Compare the coordinate of the mouse pointer with the position of each node and update the value of the variable node\_clicked whenever mouse is clicked and open the URL that corresponds to that node in the default browser being used. |
