@@ -42,7 +42,7 @@ This project shall aim at one such visualization of Graph Representation of Epis
 | --- | --- | --- |
 | **1** | **ArrayList** **String** crawl() | This method doesn&#39;t accept any arguments. It creates 3 different variables at the time of invocation, the first one is &#39;inputline&#39; which stores the HTML code of the website and two arraylists URLs and URLss are created. This method is used to populate the list URLs with the URL of the hyperlinks present in any website. The URLs present in this list are then filtered and valid URLs from this are stored in the list URLss. Here the number of hyperlinks fetched is limited to 9, since fetching all the hyperlinks becomes a time-consuming process. |
 | **2** | **ArrayList** **String** **crawl(**String** url) | This method which accepts the string url which is the url link of the wikipedia website which is to be parsed as an argument initially performs the tasks which are done by the constructor Crawler(String url) and in the latter part it completes the same task done by the method crawl() which accepts no arguments. |
-| **3** | **String** ToString ( **ArrayList**** \&lt; ****Character**** \&gt;** list) | This method accepts an arraylist of character elements and converts it to an arraylist of string elements. |
+| **3** | **String** ToString ( **ArrayList** **Character** list) | This method accepts an arraylist of character elements and converts it to an arraylist of string elements. |
 
 # 2. Graph
 
